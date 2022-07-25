@@ -1,0 +1,21 @@
+{
+  "name": "telegrambotchet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Honcharenko Danil",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^15.0.0",
+    "node-telegram-bot-api": "^0.56.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
