@@ -16,11 +16,11 @@ const start = () => {
         },
         {
             command: '/pin',
-            description: 'Закрепить сообщение (Бета)'
+            description: 'Закрепить сообщение (Недоступны)'
         },
         {
             command: '/unpin',
-            description: 'Открепить сообщение (Бета)'
+            description: 'Открепить сообщение (Недоступны)'
         }
     ]);
 
@@ -29,8 +29,8 @@ const start = () => {
         const text = msg.text;
         const chatId = msg.chat.id;
         const nameUs = msg.from.first_name;
-        const mesId = msg.message_id;
-        const mesIdRepley = msg.reply_to_message?.message_id;
+        // const mesId = msg.message_id;
+        // const mesIdRepley = msg.reply_to_message?.message_id;
 
         const schedule = 'http://dkrkm.org.ua/lesson-schedule#breadcrumbs';
         const version = '1.0';
@@ -46,15 +46,15 @@ const start = () => {
             await bot.sendMessage(chatId, `Вот ваше расписание ${nameUs} расположено по адресу ${schedule}.`);
         }
 
-        if (text === '/pin') {
-            await bot.pinChatMessage(chatId, mesIdRepley);
-            await bot.sendMessage(chatId,'Сообщение было закреалено');
-        }
-
-        if (text === '/unpin') {
-            await bot.unpinChatMessage(chatId);
-            await bot.sendMessage(chatId,'Сообщение было откреплено');
-        }
+        // if (text === '/pin') {
+        //     await bot.pinChatMessage(chatId, mesIdRepley);
+        //     await bot.sendMessage(chatId,'Сообщение было закреалено');
+        // }
+        //
+        // if (text === '/unpin') {
+        //     await bot.unpinChatMessage(chatId);
+        //     await bot.sendMessage(chatId,'Сообщение было откреплено');
+        // }
     });
 };
 
